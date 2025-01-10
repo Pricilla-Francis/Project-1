@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: block;
+    font-family: "Pompiere", sans-serif;
+    color: #2b052c;
+    background-color: #f3f8f8; 
+}
+head{
+    background-color: #ba49bd;
+    text-align: right;
+}
+
+.title {
+    font-size: 2.8rem;
+    margin: 1rem 0;
+    background-color: #ba49bd;
+}
+
+h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin: 2rem 0;
+}
