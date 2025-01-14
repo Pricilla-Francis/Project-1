@@ -5,6 +5,7 @@ const img = document.createElement("img");
 
 yourflavorButton.addEventListener('click', () => {
   customerList.innerHTML = '';
+  console.log ('Clicked!!')
   const firstName = document.querySelector('#firstName').value.trim();
   const email = document.querySelector('#email').value.trim();
   const birthMonthElement = document.getElementById("myDropdown");
@@ -77,9 +78,14 @@ yourflavorButton.addEventListener('click', () => {
   messageItem.textContent = message;
   messageItem.classList.add('fade-in'); 
   customerList.appendChild(messageItem);
+  console.log (email)
 
+  localStorage.setItem('email', email);
+  localStorage.setItem('myDropdown',birthMonthElement.value)
+
+  
 //DOES NOT REFRESH ITEMS * ERASE TO REFRESH EACH TIME
-  //document.querySelector('#firstName').value = '';
-  //document.querySelector('#email').value = '';
-  //birthMonthElement.value = '';
+  document.querySelector('#firstName').value = '';
+  document.querySelector('#email').value = '';
+  birthMonthElement.value = '';
 });
