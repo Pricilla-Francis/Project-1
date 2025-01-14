@@ -21,25 +21,25 @@ yourflavorButton.addEventListener('click', () => {
 
   let message = '';
   switch (birthMonth) {
-    case "January":
+    case "January": //DANAH
       message = `blank`;
       break;
-    case "February":
+    case "February": //DANAH
       message = `blank`;
       break;
-    case "March":
+    case "March": //TIM
       message = `blank`;
       break;
-    case "April":
+    case "April": //PRICILLA
       message = `blank`;
       break;
-    case "May":
+    case "May": //SCOTT 
       message = `blank`;
       break;
-    case "June":
+    case "June": //DANAH
       message = `blank`;
       break;
-    case "July":
+    case "July": //DANAH
       message = `blank`;
       break;
     case "August":
@@ -59,14 +59,14 @@ yourflavorButton.addEventListener('click', () => {
       You bring people together, just like Cookies and Cream! Or maybe peanut butter and jelly? 
       Wait, do we have that flavor too?`;
       break;
-    case "October":
-      message = `blank`;
+    case "October": //EDDIE
+      message = `Your flavor is Banana Pudding`;
       break;
-    case "November":
-      message = `blank`;
+    case "November": //EDDIE
+      message = `Frosted Peppermint`;
       break;
-    case "December":
-      message = `blank`;
+    case "December": //EDDIE
+      message = `Caramel Apple`;
       break;
     default:
       message = `No Ice Cream for you :(`;
