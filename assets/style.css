@@ -4,8 +4,8 @@
     box-sizing: border-box;
     display: block;
     font-family: "Pompiere", sans-serif;
-    color: #2b052c;
-    background-color: #f3f8f8; 
+    color: #e25cc2;
+    background-color: #6e3926; 
 }
 head{
     background-color: #ba49bd;
@@ -23,4 +23,56 @@ head{
     font-size: 2.5rem;
     text-align: center;
     margin: 2rem 0;
+}
+
+header {
+    background-color:#6e3926;
+    background-image:url('assets/image/img.jpeg');
+}
+.navlist {
+    display: flex;
+    background-color: #6e3926;
+    color: var(--heliotrope); 
+    
+}
+
+.navlist li {
+    list-style: none;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.header{
+    text-align: center;
+    padding: 0;
+}
+#id{
+    background-image: none;
+}
+
+h1{
+    font-size: 2.5rem;
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 2rem 0;
+
+}
+.letsgo {
+    align-self: start;
+    color: var(--heliotrope)
+}
+.SecretFlavor{
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.page1footer{
+    color: var(--heliotrope)
 }
