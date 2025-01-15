@@ -31,40 +31,41 @@
     </div> 
     </header>
     <main>
-        <section class="main">
-            <form>
-                <label for="fname">What's your name:</label>
-                <input type="text" id="fname" name="fname"><br><br>
 
-                <label for="email">Email address:</label>
-                <input type="text" id="email" name="email"><br><br>
-                <label for="birthdayMonth">Birthday month?:</label>
-                <select id="myDropdown" id="birthMonth" placeholder="Enter birth month">
-                    <option value="January">January</option>
-                    <option value="February">February</option>
-                    <option value="March">March</option>
-                    <option value="April">April</option>
-                    <option value="May">May</option>
-                    <option value="June">June</option>
-                    <option value="July">July</option>
-                    <option value="August">August</option>
-                    <option value="September">September</option>
-                    <option value="October">October</option>
-                    <option value="November">November</option>
-                    <option value="December">December</option>
-                  </select>
-                <button style='font-size:24px'>Let's Go!🍦</button>
-              </form>
-        </section>
-        <!-- <div class="birthMonthtracker">Top Birthday Month</div> -->
+        <div class="form-group">
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" placeholder="Enter first name">
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address:</label>
+            <input type="text" id="email" placeholder="Enter email address">
+          </div>
+          <div class="form-group">
+            <label for="birthMonth">Birth Month:</label>
+            <select id="myDropdown" id="birthMonth" >
+              <option value="January">January</option>
+              <option value="February">February</option>
+              <option value="March">March</option>
+              <option value="April">April</option>
+              <option value="May">May</option>
+              <option value="June">June</option>
+              <option value="July">July</option>
+              <option value="August">August</option>
+              <option value="September">September</option>
+              <option value="October">October</option>
+              <option value="November">November</option>
+              <option value="December">December</option>
+            </select>
+          </div>
+          <button id="yourflavor">Let's Go!🍦</button>
+        </div>
+        <div class="customer-list" id="customerList">
+            <h2>What's your flavor?</h2>
+            <ul id="customerItems"></ul>
+          </div>
+
         <section>
-                <label for="birthdayMonth">What is your Birthday month?:</label>
-                <input type="text" id="birthdayMonth" name="birthdayMonth"><br><br>
 
-                         <button class="letsgo" style='font-size:24px'>Let's Go!🍦</button>
-              </form>
-        </section>
-        <section class="SecretFlavor">
             <h2>Secret Flavor of the Month!</h2>
             <p>Take a guess?</p>
             
@@ -82,3 +83,4 @@
 </body>
 <script src="script.js"></script>
 </html>
+
