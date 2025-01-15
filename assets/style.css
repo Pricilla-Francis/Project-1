@@ -29,12 +29,23 @@ head{
 
 .title2{
     color: red;
+    background-image: url('/assets/title-background.jpeg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    color: cyan;
+ main
     display: flex;
     justify-content: center;
     align-items: center;
     height: 300px;
     background-color: orange;
+
     font-size: 200px;
+    font-size: clamp(100px, 5vw, 100Px);
+    text-align: center;
+    width: 100%;
+main
 
 }
 
@@ -59,12 +70,40 @@ head{
 text-align: center;
 
 
+.flavor-container{
+    display: flex;
+      flex-wrap: wrap;
+      gap: 20px; 
+      justify-content: center;
+}
+
+.flavors{
+    padding: 20px;
+    margin: 20px;
+    background-color: white;
+    border-width: 20px;
+    border-style: double;
+    border-color: black;
+    width: 400px;
+    height: 300px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.flavor-pic{
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+main
+
 }
 
 footer{
     text-align: center;
     font-weight: bolder;
 
+
+} main
 header {
     background-color:#6e3926;
     background-image:url('assets/image/img.jpeg');
