@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: block;
+    font-family: "Pompiere", sans-serif;
+    color: #e25cc2;
+    background-color: #6e3926; 
+}
+head{
+    background-color: #ba49bd;
+    text-align: right;
+}
+
+.title {
+    font-size: 2.8rem;
+    margin: 1rem 0;
+    background-color: #ba49bd;
+    text-align: center;
+}
+
+.flavor-box {
+    font-size: 2.5rem;
+    text-align: center;
+    margin: 2rem 0;
+}
+
+
+
+.title2{
+    color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    background-color: orange;
+    font-size: 200px;
+
+}
+
+.body{
+    background-image: url(/assets/images/sprinkles.jpg);
+    background-size:cover;
+    background-position: center center;
+    background-repeat: repeat;
+    margin: 0;
+    height: 100vh;
+    
+}
+
+
+
+.flavors{
+ padding: 10px;
+ margin: 50x;
+ border: 50px black;
+ border-radius: 20px;
+ background-color: cyan;
+text-align: center;
+
+
+}
+
+footer{
+    text-align: center;
+    font-weight: bolder;
+
+header {
+    background-color:#6e3926;
+    background-image:url('assets/image/img.jpeg');
+}
+.navlist {
+    display: flex;
+    background-color: #6e3926;
+    color: var(--heliotrope); 
+    
+}
+
+.navlist li {
+    list-style: none;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.header{
+    text-align: center;
+    padding: 0;
+}
+#id{
+    background-image: none;
+}
+
+h1{
+    font-size: 2.5rem;
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 2rem 0;
+
+}
+.letsgo {
+    align-self: start;
+    color: var(--heliotrope)
+}
+.SecretFlavor{
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.page1footer{
+    color: var(--heliotrope)
+
+}
