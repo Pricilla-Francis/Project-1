@@ -2,15 +2,21 @@ const yourflavorButton = document.querySelector('#yourflavor');
 const customerList = document.querySelector('#customerItems');
 const customers = [];
 const img = document.createElement("img");
+let clickCount =0;
 
+document.addEventListener('DOMContentLoaded', () => {
 yourflavorButton.addEventListener('click', () => {
   customerList.innerHTML = '';
   console.log ('Clicked!!')
+  clickCount++;
+if (clickCount === 5) {
+  console.log ('SECRET MESSAGE DISPLAYED') 
+  }
   const firstName = document.querySelector('#firstName').value.trim();
   const email = document.querySelector('#email').value.trim();
-  const birthMonthElement = document.getElementById("myDropdown");
+  const birthMonthElement = document.getElementById("birthmonthDropdown");
   const birthMonth = birthMonthElement.value;
-
+  
 
   if (!firstName || !email || !birthMonth) {
     alert("Ooops! Don't have all the info! :(.");
@@ -21,6 +27,7 @@ yourflavorButton.addEventListener('click', () => {
   customers.push(customer);
 
   let message = '';
+  
   switch (birthMonth) {
     case "January": //DANAH
       message = `blank`;
@@ -72,20 +79,49 @@ yourflavorButton.addEventListener('click', () => {
     default:
       message = `No Ice Cream for you :(`;
       break;
+
   }
 
+  
   const messageItem = document.createElement('p');
   messageItem.textContent = message;
   messageItem.classList.add('fade-in'); 
   customerList.appendChild(messageItem);
-  console.log (email)
+  console.log (email);
+
 
   localStorage.setItem('email', email);
-  localStorage.setItem('myDropdown',birthMonthElement.value)
+  localStorage.setItem('birthmonthDropdown',birthMonthElement.value)
 
-  
+
 //DOES NOT REFRESH ITEMS * ERASE TO REFRESH EACH TIME
-  document.querySelector('#firstName').value = '';
-  document.querySelector('#email').value = '';
-  birthMonthElement.value = '';
+  //document.querySelector('#firstName').value = '';
+  //document.querySelector('#email').value = '';
+  //birthMonthElement.value = '';
+
+     const askedtoSubscribe = localStorage.getItem('Asked to subscribe');
+  
+     if (!askedtoSubscribe) {
+      setTimeout(() => {
+        console.log('Asked to subscribe!');
+        const modal = document.querySelector('#subscribeBox');
+        modal.style.display = 'block';
+  
+        
+        localStorage.setItem('Asked to subscribe', 'yes');
+  
+        
+        document.querySelector('#Yes').addEventListener('click', () => {
+          modal.style.display = 'none';
+        });
+  
+        document.querySelector('#No').addEventListener('click', () => {
+          modal.style.display = 'none';
+        });
+      }, 5000); 
+     
+    } else {
+      console.log('Already asked to subscribe.');
+    }
+  });
 });
