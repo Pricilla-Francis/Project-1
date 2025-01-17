@@ -30,13 +30,30 @@ main{
     background-color: #6e3926; 
 }
 
+
+#content{
+    background-image: url("./images/guavaSwirl.jpg") !important;
+    background-size:cover;
+    background-position: center center;
+    background-repeat: repeat;
+    margin: 0;
+    height: 100vh;
+    
+}
+
+
+
+
+
+
+footer{
+    text-align: center;
+    font-weight: bolder;
+}
 header {
-    /* background-color:#6e3926; */
-    background-image:url("./meltdown.jpeg");
-    background-size: cover;
-
-
-
+    background-color:#6e3926;
+    background-image:url('./title-background.jpeg');
+}
 
 .navlist {
     color: var(--heliotrope); 
