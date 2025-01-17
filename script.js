@@ -1,43 +1,29 @@
-const months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+const months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
 const yourflavorButton = document.querySelector('#yourflavor');
 const customerList = document.querySelector('#customerItems');
 const customers = [];
 const img = document.createElement("img");
-
-
-
-//todo add table
-//display key value pairs in table
-console.log(months[0]);
-
 
 function randMonthVal(){
     for (let i=0;i<months.length;i++){
         localStorage.setItem(months[i],Math.floor(Math.random()*13));
     }
 }
-function initForm(){
-    customerList.innerHTML = '';
-    const firstName = document.querySelector('#firstName').value.trim();
-    const email = document.querySelector('#email').value.trim();
-    const birthMonthElement = document.getElementById("myDropdown");
-    const birthMonth = birthMonthElement.value;
-}
 
-//REMOVE to randomize months array values
-//randMonthVal();
+
+if(localStorage.getItem(months[0])>0){
+  console.log("fine")
+}else randMonthVal();
 
 //todo add table
 //display key value pairs in table
-console.log(months[0]);
 
 
-//todo change ID's as needed
 function postForm(){
   customerList.innerHTML = '';
   const firstName = document.querySelector('#firstName').value.trim();
   const email = document.querySelector('#email').value.trim();
-  const birthMonth = document.getElementById("myDropdown").value;
+  let birthMonth = document.getElementById("myDropdown").value;
   
   if (!firstName || !email || !birthMonth) {
     alert("Ooops! Don't have all the info! :(.");
@@ -101,20 +87,26 @@ function postForm(){
       break;
   }
   function printFlavor(){
-  const messageItem = document.createElement('p');
-  messageItem.textContent = message;
-  customerList.appendChild(messageItem);
+    const messageItem = document.createElement('p');
+    messageItem.textContent = message;
+    customerList.appendChild(messageItem);
   }
   printFlavor();
-  console.log(birthMonth);
-  
-  
+
+  for(let i=0;i<months.length;i++){
+    if (birthMonth=months[i]){
+      let numValChange = (Number(localStorage.getItem(months[i])));
+      numValChange++;
+      stringValChange = String(numValChange);
+      localStorage.setItem(months[i],stringValChange);
+      break;
+    }else console.log("failed to update");
+  }
+
   //DOES NOT REFRESH ITEMS * ERASE TO REFRESH EACH TIME
   //document.querySelector('#firstName').value = '';
   //document.querySelector('#email').value = '';
   //birthMonthElement.value = '';
   }
-
-
 
 yourflavorButton.addEventListener('click', postForm);
