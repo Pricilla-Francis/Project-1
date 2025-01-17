@@ -28,6 +28,11 @@ main{
     background-color: #6e3926; 
 }
 
+header {
+    /* background-color:#6e3926; */
+    background-image:url("./meltdown.jpeg");
+    background-size: cover;
+}
 
 #content{
     background-image: url("./images/guavaSwirl.jpg") !important;
@@ -38,11 +43,6 @@ main{
     height: 100vh;
     
 }
-
-
-
-
-
 
 footer{
     text-align: center;
