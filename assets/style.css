@@ -16,8 +16,6 @@
     position: absolute;
     top:300px;
     left: 37%;
-    color: ;
-       
 }
 
 .flavor-box {
@@ -34,8 +32,7 @@ header {
     /* background-color:#6e3926; */
     background-image:url("./meltdown.jpeg");
     background-size: cover;
-
-
+}
 
 
 .navlist {
@@ -55,8 +52,6 @@ header {
 
 .header{
     text-align: center;
-    text-height: 100px;
-    
 }
 
 .form-group{

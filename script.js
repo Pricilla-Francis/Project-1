@@ -4,20 +4,12 @@ const customerList = document.querySelector('#customerItems');
 const customers = [];
 const img = document.createElement("img");
 
-
 function randMonthVal(){
     for (let i=0;i<months.length;i++){
         localStorage.setItem(months[i],Math.floor(Math.random()*13));
     }
 }
 
-function initForm(){
-    customerList.innerHTML = '';
-    const firstName = document.querySelector('#firstName').value.trim();
-    const email = document.querySelector('#email').value.trim();
-    const birthMonthElement = document.getElementById("myDropdown");
-    const birthMonth = birthMonthElement.value;
-}
 
 if(localStorage.getItem(months[0])>0){
   console.log("fine")
