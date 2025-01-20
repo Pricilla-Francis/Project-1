@@ -1,3 +1,4 @@
+const months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
 const yourflavorButton = document.querySelector('#yourflavor');
 const customerList = document.querySelector('#customerItems');
 const customers = [];
@@ -8,26 +9,41 @@ document.addEventListener('DOMContentLoaded', () => {
 yourflavorButton.addEventListener('click', () => {
   customerList.innerHTML = '';
   console.log ('Clicked!!')
-  clickCount++;
+  clickCount+{}});
 if (clickCount === 5) {
   console.log ('SECRET MESSAGE DISPLAYED') 
   }
+
+function randMonthVal(){
+    for (let i=0;i<months.length;i++){
+        localStorage.setItem(months[i],Math.floor(Math.random()*13));
+    }
+}
+
+
+if(localStorage.getItem(months[0])>0){
+  console.log("fine")
+}else randMonthVal();
+
+//todo add table
+//display key value pairs in table
+
+
+function postForm(){
+  customerList.innerHTML = '';
   const firstName = document.querySelector('#firstName').value.trim();
   const email = document.querySelector('#email').value.trim();
-  const birthMonthElement = document.getElementById("birthmonthDropdown");
-  const birthMonth = birthMonthElement.value;
+  let birthMonth = document.getElementById("myDropdown").value;
   
-
   if (!firstName || !email || !birthMonth) {
     alert("Ooops! Don't have all the info! :(.");
     return;
   }
-
+  
   const customer = { firstName, email, birthMonth };
   customers.push(customer);
-
-  let message = '';
   
+  let message = '';
   switch (birthMonth) {
     case "January": //DANAH
       message = `Your flavor is “Birthday Cake!” 🎂 Maybe you’re thinking that Birthday cake is your flavor because it’s the first month of the year. 
@@ -44,7 +60,7 @@ if (clickCount === 5) {
       You pride yourself in being stable, ambitious and practical.`;
       break;
     case "March": //SCOTT
-      message = `Your flavor is "Strawberry Cheesecake!" Stay classy! Whe you walk into a room you turn everyone's head!
+      message = `Your flavor is "Strawberry Cheesecake!" Stay classy! When you walk into a room you turn everyone's head!
       They can't wait to know you and they can't wait to try this flavor! It is rich and decadent and leaves a lasting inpression!`;
       break;
     case "April": //PRICILLA
@@ -110,49 +126,70 @@ if (clickCount === 5) {
     default:
       message = `No Ice Cream for you :(`;
       break;
-
   }
 
+  if (firstName === 'Darth Vader' || firstName === 'darth vader') {
+    message = 'Nice job guessing the secret flavor! Dark-side chocolate is our most popular! Drop by for a free scoop! May the Melt Down be with you! Enjoy it you will!';
+  }
   
-  const messageItem = document.createElement('p');
-  messageItem.textContent = message;
-  messageItem.classList.add('fade-in'); 
-  customerList.appendChild(messageItem);
-  console.log (email);
+  if (firstName === 'Luke Skywalker' || firstName === 'luke skywalker') {
+    message = 'Boooooooooo!';
+  }
 
 
-  localStorage.setItem('email', email);
-  localStorage.setItem('birthmonthDropdown',birthMonthElement.value)
 
+  function printFlavor(){
+    const messageItem = document.createElement('p');
+    messageItem.textContent = message;
+    messageItem.classList.add('fade-in');
+    customerList.appendChild(messageItem);
+    console.log (email);
 
-//DOES NOT REFRESH ITEMS * ERASE TO REFRESH EACH TIME
+    localStorage.setItem('email', email);
+
+  }
+  printFlavor();
+
+  for(let i=0;i<months.length;i++){
+    if (birthMonth=months[i]){
+      let numValChange = (Number(localStorage.getItem(months[i])));
+      numValChange++;
+      stringValChange = String(numValChange);
+      localStorage.setItem(months[i],stringValChange);
+      break;
+    }else console.log("failed to update");
+  }
+
+  //DOES NOT REFRESH ITEMS * ERASE TO REFRESH EACH TIME
   //document.querySelector('#firstName').value = '';
   //document.querySelector('#email').value = '';
   //birthMonthElement.value = '';
+  }
 
-     const askedtoSubscribe = localStorage.getItem('Asked to subscribe');
+  const askedtoSubscribe = localStorage.getItem('Asked to subscribe');
   
-     if (!askedtoSubscribe) {
-      setTimeout(() => {
-        console.log('Asked to subscribe!');
-        const modal = document.querySelector('#subscribeBox');
-        modal.style.display = 'block';
-  
-        
-        localStorage.setItem('Asked to subscribe', 'yes');
-  
-        
-        document.querySelector('#Yes').addEventListener('click', () => {
-          modal.style.display = 'none';
-        });
-  
-        document.querySelector('#No').addEventListener('click', () => {
-          modal.style.display = 'none';
-        });
-      }, 5000); 
+  if (!askedtoSubscribe) {
+   setTimeout(() => {
+     console.log('Asked to subscribe!');
+     const modal = document.querySelector('#subscribeBox');
+     modal.style.display = 'block';
+
      
-    } else {
-      console.log('Already asked to subscribe.');
-    }
-  });
+     localStorage.setItem('Asked to subscribe', 'yes');
+
+     
+     document.querySelector('#Yes').addEventListener('click', () => {
+       modal.style.display = 'none';
+     });
+
+     document.querySelector('#No').addEventListener('click', () => {
+       modal.style.display = 'none';
+     });
+   }, 10000); 
+  
+ } else {
+   console.log('Already asked to subscribe.');
+ }
+ yourflavorButton.addEventListener('click', postForm);
 });
+;

@@ -1,0 +1,222 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: block;
+    font-family: "Pompiere", sans-serif;
+    color: #E25CC2;
+}
+.title {
+    font-family: 'Bubble Letters', sans-serif;
+    font-size: 5rem;
+    margin: 1rem 0;
+    text-align: center;
+    text-shadow: 10px 10px 10px #000000;
+    position: absolute;
+    top:100px;
+    left: 29%;
+    color: #ECE8B8;
+    text-decoration: underline;
+}
+.flavor-box {
+    font-size: 2.5rem;
+    text-align: center;
+    margin: 2rem 0;
+}
+main{
+    background-color: #6E3926;
+}
+header {
+    /* background-color:#6e3926; */
+    background-image:url("./meltdown.jpeg");
+    background-size: cover;
+}
+.navlist {
+    color: var(--heliotrope);
+    height: 400px;
+}
+.navlist ul {
+    list-style: none;
+    text-decoration: none;
+    cursor: pointer;
+    color: var(--heliotrope);
+    display: flex;
+    justify-content:space-between;
+}
+.header{
+    text-align: center;
+}
+
+.form-group{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 2rem 0;
+    text-shadow: 3px 3px 3px #000000;
+}
+
+#letsgo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 2rem 0;
+    box-shadow: inset;
+}
+
+h1{
+    font-size: 2.5rem;
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 2rem 0;
+    text-shadow: 3px 3px 3px #000000;
+}
+#letsgo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 2rem 0;
+    box-shadow: inset;
+}
+h1{
+    font-size: 2.5rem;
+    text-align: center;
+    margin: 2rem 0;
+    background-size:cover;
+    text-shadow: 5px 5px 5px #601515;
+}
+.secretflavor{
+    justify-content: center;
+    text-align: center;
+    text-shadow: 5px 5px 5px #601515;
+}
+#main{
+    display: flex;
+    justify-content: space-between; 
+    /* align-items: center; */
+    /* flex-direction: column;
+    margin: 2rem 0;
+    background-size:cover; */
+}
+.customer-list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 2rem 0;
+    background-size:cover;
+    text-shadow: 10px 10px 10px #601515;
+    font-family: 'Little Princess', sans-serif;
+}
+.sidebar{
+    text-align: center;
+    text-shadow: 5px 5px 5px #601515;
+    font-family: 'KBWiggleWorm', sans-serif;
+    border: 5px solid rgb(212, 136, 183);
+    max-width: 30%;
+    
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 3s forwards; 
+  }
+  
+  @keyframes fadeIn {
+    to {
+      opacity: 2;
+    }
+
+  }
+  .small-modal {
+    display: none; 
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    width: 300px; 
+    padding: 15px; 
+  }
+  
+  .modal-content {
+    text-align: center;
+  }
+  
+  .modal-content h3 {
+    font-size: 1.2rem; 
+    margin-bottom: 10px;
+  }
+  
+  .modal-content p {
+    font-size: 0.9rem; 
+    margin-bottom: 15px;
+  }
+  
+  .modal-buttons {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .modal-buttons button {
+    font-size: 0.9rem;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .modal-buttons button:hover {
+    background-color: #f0f0f0;
+  }
+
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-size:cover;
+    color: #E327DC;
+}
+.page1footer{
+    color: var(--heliotrope);
+    justify-content: left; 
+    display: flex;
+    justify-content:space-evenly ;
+}
+footer{
+    background-color: #6E3926;
+}
+@media(min-width: 992px) {
+    body {
+        font-size:1.25rem;
+        line-height: 2rem
+    }
+}
+@media(min-width: 992px) {
+    body {
+        --bs-body-font-size: 1.25rem;
+        --bs-body-line-height: 2rem
+    }
+}
+
+
+
+
+
+
+
+
+
