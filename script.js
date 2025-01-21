@@ -185,4 +185,5 @@ function postForm(){
    console.log('Already asked to subscribe.');
  }
  
- yourflavorButton.addEventListener('click', postForm);
+ yourflavorButton.addEventListener('click', postForm)
+});
