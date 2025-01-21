@@ -7,6 +7,7 @@
     color: #E25CC2;
     
 }
+
 .title {
     font-family: 'Bubble Letters', sans-serif;
     font-size: 6rem;
@@ -19,21 +20,26 @@
     color: #ECE8B8;
     text-decoration: underline;
 }
+
 .flavor-box {
     font-size: 2.5rem;
     text-align: center;
     margin: 2rem 0;
 }
+
 main{
     background-color: #6E3926;
 }
+
 header {
     background-image:url("./meltdown.jpeg");
 }
+
 .navlist {
     color: var(--heliotrope);
     height: 400px;
 }
+
 .navlist ul {
     font-size:1.25rem;
     list-style: none;
@@ -44,6 +50,7 @@ header {
     justify-content:space-between;
     margin-right: 15px;
 }
+
 .header{
     text-align: center;
 }
@@ -80,6 +87,7 @@ h1{
     margin: 2rem 0;
     text-shadow: 3px 3px 3px #000000;
 }
+
 #yourflavor{
     display: flex;
     justify-content: center;
@@ -88,10 +96,12 @@ h1{
     margin: 2rem 0;
     box-shadow: inset;
 }
+
 #yourflavor :hover{
     background-color: #eba7ea;
     color: #6E3926;
 }
+
 h1{
     font-size: 2.5rem;
     text-align: center;
@@ -99,15 +109,18 @@ h1{
     background-size:cover;
     text-shadow: 5px 5px 5px #601515;
 }
+
 .secretflavor{
     justify-content: center;
     text-align: center;
     text-shadow: 5px 5px 5px #601515;
 }
+
 #main{
     display: flex;
     justify-content: space-between; 
 }
+
 .customer-list{
     display: flex;
     justify-content: center;
@@ -119,20 +132,18 @@ h1{
     font-family: 'Little Princess', sans-serif;
     font-size: 95px;
 }
-#placeholder{
-    float: left;
-}
+
 .sidebar{
     text-align: center;
     text-shadow: 5px 5px 5px #601515;
     border: 5px solid rgb(212, 136, 183);
     width: 300px;
-    
-    
 }
+
 .hint{
     color: var(--heliotrope)rgb(64, 43, 226);
 }
+
 .footer{
     font-size: 25px;
     display: flex;
@@ -142,16 +153,21 @@ h1{
     background-size:cover;
     color: #E327DC;
 }
+
 .page1footer{
     color: var(--heliotrope);
     justify-content: left; 
     display: flex;
     justify-content:space-evenly ;
 }
+
 footer{
     background-color: #6E3926;
 }
 
+/*
+    Text fade and Modal
+*/
 .fade-in {
 opacity: 0;
 animation: fadeIn 3s forwards; 
@@ -163,10 +179,11 @@ to {
 }
 
 }
+
 #title{
 display: none;
-
 }
+
 .small-modal {
 display: none; 
 position: fixed;
@@ -212,6 +229,9 @@ cursor: pointer;
 background-color: #f0f0f0;
 } 
 
+/*
+    Table Container and its elements
+*/
 #placeholder{
     display: contents;
     min-width: 30%;
@@ -244,6 +264,45 @@ td{
     text-align: right;
 }
 
+/*
+    Social Media Links
+*/
+.fa:hover {
+    opacity: 0.8;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-google {
+  background: #dd4b39;
+  color: white;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+/*
+    Media Queries
+*/
 @media(max-width: 1598px) {
     body {
         font-size:1.25rem;
@@ -281,39 +340,7 @@ td{
         max-width: 100vw;
     }
 }
-.fa:hover {
-    opacity: 0.8;
-}
 
-.fa-facebook {
-  background: #3B5998;
-  color: white;
-}
-
-.fa-twitter {
-  background: #55ACEE;
-  color: white;
-}
-
-.fa-google {
-  background: #dd4b39;
-  color: white;
-}
-
-.fa-linkedin {
-  background: #007bb5;
-  color: white;
-}
-
-.fa-youtube {
-  background: #bb0000;
-  color: white;
-}
-
-.fa-instagram {
-  background: #125688;
-  color: white;
-}
 
 
 @media(max-width: 1200px) {
