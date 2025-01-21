@@ -1,22 +1,115 @@
 const months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+const customers = [];
 const yourflavorButton = document.querySelector('#yourflavor');
 const customerList = document.querySelector('#customerItems');
-const customers = [];
+const hiScore = document.querySelector('#placeholder');
+const hiScoreTable = document.querySelector('#hiscoretable');
 const img = document.createElement("img");
+let monthName = "";
+let hiScoreValue = new Array((months.length));
 
-function randMonthVal(){
-    for (let i=0;i<months.length;i++){
-        localStorage.setItem(months[i],Math.floor(Math.random()*13));
-    }
+//creates a val(0-40) and assigns it to every local.month[]
+function randTable(){
+  for (let i=0;i<months.length;i++){
+    let val = Math.floor(Math.random()*40);     //set rand val here
+    localStorage.setItem(months[i],val);
+  }
 }
 
+//If any local.months missing, randomizes table
+function initialTableGen(){
+  for(let i=0;i<months.length;i++){
+    checkVal = localStorage.getItem(months[i]);
+    if (!checkVal){
+      randTable();
+      console.log("Generated Values.");
+    }
+  }
+}
 
-if(localStorage.getItem(months[0])>0){
-  console.log("fine")
-}else randMonthVal();
+//create "element" with "varname" as the id, returns element
+function elementBuilder(element, varname){
+  let nameVal = String(varname);
+  varname = document.createElement(element);
+  varname.id = nameVal
+  return varname;
+}
 
-//todo add table
-//display key value pairs in table
+function initialTableDisplay(){
+  elementBuilder("td","monthItem");
+  elementBuilder("td","monthValue");
+}
+
+initialTableGen();
+initialTableDisplay();
+
+hiScoreTable.appendChild(elementBuilder("thead","hiScoreHead"));
+hiScoreHead.appendChild(elementBuilder("th","monthHead"));
+hiScoreHead.appendChild(elementBuilder("th","valHead"));
+monthHead.innerHTML = "Month";
+valHead.innerHTML = "Value";
+hiScoreTable.appendChild(elementBuilder("tbody","hiScoreBody"));
+const hiScoreBodyRef = document.querySelector('#hiScoreBody');
+//document.getElementById("monthHead")
+//document.getElementById("ValHead")
+
+ for (let i = 0;i<months.length;i++){
+  hiScoreBody.append(elementBuilder("tr","hiScoreRow "+i));
+}; 
+let childVal = hiScoreBody.childElementCount;
+console.log(childVal)
+//hiScoreBody[2].innerHTML ="html"
+//console.log(hiScoreBody[2]);
+
+function populateTable(){
+for(let i=0;i<hiScoreBody.childElementCount;i++){
+   let bodyID = document.getElementById("hiScoreRow "+i);
+   bodyID.appendChild(elementBuilder("td","month "+i));
+   let bodyMonth = document.getElementById("month " +i);
+   bodyMonth.textContent = months[i];
+   bodyID.appendChild(elementBuilder("td","monthVal "+i));
+   let bodyVal = document.getElementById("monthVal "+i);
+   bodyVal.textContent = Number(localStorage.getItem(months[i]));
+};
+}
+populateTable();
+/* for (let i = 0;i<childVal;i++){
+  if (hiScoreBody[i]=)
+} */
+
+  //todo add table
+  //display key value pairs in table
+  
+/*
+
+
+  hiScoreBody.append(hiScoreRow);
+  hiScoreRow.append(monthItem);
+  hiScoreRow.append(monthValue);
+  hiScoreBody.append(hiScoreRow);
+  hiScoreRow.append(monthItem);
+  hiScoreRow.append(monthValue); */
+  
+//TODO create array for the body
+//body should have tr[] of 0&1 for monthItem&monthValue both td elements
+//body[tr[td1,td2]tr2[td1,td2]etc.]
+
+/*
+console.log(hiScoreTable.childElementCount);
+for(let i = 0;i<months.length;i++){
+  console.log(months[i]);
+  dataRow[0].textContent=months[i];
+  dataRow[1].textContent=localStorage.getItem(months[i]);
+  //let monthRow = document.querySelector("#")
+  
+  }
+}
+*/
+
+//hiScore.firstElementChild.id = "placeholder";
+//monthHead.textContent = localStorage.getItem(months[1]);
+//monthName = String(months[1]);
+//valHead.textContent = localStorage.getItem(months[1]);
 
 
 function postForm(){
