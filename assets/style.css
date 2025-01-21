@@ -151,6 +151,63 @@ h1{
 footer{
     background-color: #6E3926;
 }
+
+ .fade-in {
+    opacity: 0;
+    animation: fadeIn 3s forwards; 
+  }
+  
+  @keyframes fadeIn {
+    to {
+      opacity: 2;
+    }
+
+  }
+  .small-modal {
+    display: none; 
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    width: 300px; 
+    padding: 15px; 
+  }
+  
+  .modal-content {
+    text-align: center;
+  }
+  
+  .modal-content h3 {
+    font-size: 1.2rem; 
+    margin-bottom: 10px;
+  }
+  
+  .modal-content p {
+    font-size: 0.9rem; 
+    margin-bottom: 15px;
+  }
+  
+  .modal-buttons {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .modal-buttons button {
+    font-size: 0.9rem;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .modal-buttons button:hover {
+    background-color: #f0f0f0;
+  } 
+  
 @media(max-width: 1598px) {
     body {
         font-size:1.25rem;
