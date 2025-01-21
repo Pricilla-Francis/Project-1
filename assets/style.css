@@ -163,6 +163,10 @@ footer{
     }
 
   }
+  #title{
+    display: none;
+    
+  }
   .small-modal {
     display: none; 
     position: fixed;
