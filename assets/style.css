@@ -128,6 +128,7 @@ h1{
     border: 5px solid rgb(212, 136, 183);
     width: 300px;
     
+    
 }
 .hint{
     color: var(--heliotrope)rgb(64, 43, 226);
@@ -187,6 +188,40 @@ footer{
         max-width: 100vw;
     }
 }
+.fa:hover {
+    opacity: 0.8;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-google {
+  background: #dd4b39;
+  color: white;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
 
 @media(max-width: 1200px) {
     body {
