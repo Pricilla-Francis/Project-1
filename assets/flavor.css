@@ -24,11 +24,13 @@ head{
 
 
 header{
+    font-family: 'Bubble Letters';
     background-image: url('./title-background.jpeg');
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat; 
-    color: white;
+    color: #ECE8B8;
+    text-decoration: underline;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -53,6 +55,8 @@ header{
 }
 
 .flavors{
+    font-family: 'Bubble Letters';
+    color: deeppink;
     padding: 20px;
     margin: 20px;
     background-color: white;
