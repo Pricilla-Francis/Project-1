@@ -71,6 +71,7 @@ header {
     text-align: center;
     margin: 2rem 0;
     box-shadow: inset;
+    font-size: 20px;
 }
 
 h1{
@@ -131,6 +132,7 @@ h1{
     text-shadow: 10px 10px 10px #601515;
     font-family: 'Little Princess', sans-serif;
     font-size: 95px;
+    position: relative;
 }
 
 .sidebar{
@@ -143,7 +145,11 @@ h1{
 .hint{
     color: var(--heliotrope)rgb(64, 43, 226);
 }
+#label{
+    font-size: 1.5rem;
+    position: relative;
 
+}
 .footer{
     font-size: 25px;
     display: flex;
@@ -232,9 +238,10 @@ background-color: #f0f0f0;
 /*
     Table Container and its elements
 */
-#placeholder{
-    display: inline-table;
-} 
+    #placeholder{
+        display: grid;
+        justify-content: right;
+    }
 
 #hiscoretable{
     display: contents;
@@ -316,6 +323,10 @@ td{
 
     .navlist ul {
         font-size: 1.25rem;
+    }
+    #placeholder{
+        display: grid;
+        justify-content: center;
     }
 
     .title {
